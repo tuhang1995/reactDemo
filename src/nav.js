@@ -7,7 +7,7 @@ export default class Nav extends Component {
         return (
           <div className='flex nav'>
             <div className='flex-item nav-item'>
-                <Link to='/buttons'>
+                <Link to='/two'>
                 主页
                 </Link>
             </div>
@@ -17,8 +17,8 @@ export default class Nav extends Component {
                 </Link>
             </div>
             <div className='flex-item'>
-                <Link to='/two'>
-                日志
+                <Link to='/table'>
+                表格
                 </Link>
             </div>
           </div>
