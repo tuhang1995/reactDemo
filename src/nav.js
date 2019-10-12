@@ -21,6 +21,11 @@ export default class Nav extends Component {
                 表格
                 </Link>
             </div>
+            <div className='flex-item'>
+              <Link to='/weather'>
+                天气组件
+              </Link>
+            </div>
           </div>
         )
     }

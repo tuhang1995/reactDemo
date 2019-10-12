@@ -9,6 +9,7 @@ import React, { Component } from 'react'
 import Two from './two'
 import Nav from './nav'
 import Parent from './parent'
+import Weather from './weather/index'
 class App extends Component {
   constructor(props){
     super(props)
@@ -40,6 +41,7 @@ class App extends Component {
                 <Route component={DemoCss} path='/demoCss' />
                 <Route component={Two} path='/two' />
                 <Route component={Parent} path='/table' />
+                <Route component={Weather} path='/weather' />
               </Switch>
             </BrowserRouter>
            </div>
