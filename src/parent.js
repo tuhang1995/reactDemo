@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Table, Divider, Tag } from 'antd';
+import React, { Component } from 'react'
+import { Table, Space, Tag } from 'antd'
 
 class parent extends Component {
-  constructor(props){
-    super(props);
+  constructor(props) {
+    super(props)
   }
   render() {
     const columns = [
@@ -11,7 +11,7 @@ class parent extends Component {
         title: 'Name',
         dataIndex: 'name',
         key: 'name',
-        render: text => <a href=''>{text}</a>,
+        render: (text) => <a>{text}</a>,
       },
       {
         title: 'Age',
@@ -27,34 +27,34 @@ class parent extends Component {
         title: 'Tags',
         key: 'tags',
         dataIndex: 'tags',
-        render: tags => (
-          <span>
-            {tags.map(tag => {
-              let color = tag.length > 5 ? 'geekblue' : 'green';
+        render: (tags) => (
+          <>
+            {tags.map((tag) => {
+              let color = tag.length > 5 ? 'geekblue' : 'green'
               if (tag === 'loser') {
-                color = 'volcano';
+                color = 'volcano'
               }
               return (
                 <Tag color={color} key={tag}>
                   {tag.toUpperCase()}
                 </Tag>
-              );
+              )
             })}
-          </span>
+          </>
         ),
       },
       {
         title: 'Action',
         key: 'action',
         render: (text, record) => (
-          <span>
+          <Space size="middle">
             <a>Invite {record.name}</a>
-            <Divider type="vertical" />
             <a>Delete</a>
-          </span>
+          </Space>
         ),
       },
-    ];
+    ]
+
     const data = [
       {
         key: '1',
@@ -77,13 +77,9 @@ class parent extends Component {
         address: 'Sidney No. 1 Lake Park',
         tags: ['cool', 'teacher'],
       },
-    ];
-    return (
-      <div>
-          <Table columns={columns} dataSource={data} />
-      </div>
-    );
+    ]
+    return <Table dataSource={data} columns={columns} />
   }
 }
 
-export default parent;
+export default parent

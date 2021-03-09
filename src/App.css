@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
     text-align: center;
 }
@@ -5,7 +7,9 @@
 .App-logo {
     height: 40vmin;
 }
-
+.nav-active{
+  color: #09d3ac;
+}
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -20,16 +24,15 @@
 .App-link {
     color: #09d3ac;
 }
-
-.two {
-    background: rosybrown;
-}
+ 
 
 .model {
     margin-top: 50px;
     border-top: 1px solid red
 }
-
+#components-form-demo-control-hooks .ant-btn {
+  margin-right: 8px;
+}
 .c-detail,
 .Indexes {
     display: flex;
